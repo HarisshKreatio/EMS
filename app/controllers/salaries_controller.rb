@@ -1,7 +1,11 @@
 class SalariesController < ApplicationController
 
   def edit
+    if admin_signed_in?
     @salary = Salary.find(params[:id])
+  else
+    redirect_to admin_session_path
+  end
   end
 
   def update

@@ -2,7 +2,11 @@ class QualificationsController < ApplicationController
 
 
   def edit
+    if admin_signed_in? or employee_signed_in?
     @qualification = Qualification.find(params[:id])
+  else
+    redirect_to admin_session_path
+  end
   end
 
   def update
