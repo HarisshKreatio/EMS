@@ -1,0 +1,31 @@
+<h1>Salary Details</h1>
+
+<%#= form_with(scope: :qualifications,url: qualification_path(@qualifications), method: :put , local: true ) do |f| %>
+<%= form_with model: @salary do |f| %>
+
+  <div class="field">
+    <%= f.label :basic_pay %><br />
+    <%= f.text_field :basic_pay, autofocus: true, autocomplete: "basic_pay" %>
+  </div>
+  <div class="field">
+    <%= f.label :hra %><br />
+    <%= f.text_field :hra, autofocus: true, autocomplete: "hra" %>
+  </div>
+  <div class="field">
+    <%= f.label :statutory_bonus %><br />
+    <%= f.text_field :statutory_bonus, autofocus: true, autocomplete: "statutory_bonus" %>
+  </div>
+  <div class="field">
+    <%= f.label :special_allowance %><br />
+    <%= f.text_field :special_allowance, autofocus: true, autocomplete: "special_allowance" %>
+  </div>
+
+
+  <%= f.number_field :employee_id, value: @salary.employee.id, type: :hidden %>
+  <%#= @qualification.employee.id %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

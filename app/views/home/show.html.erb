@@ -1,0 +1,46 @@
+<h1><%= @employee.name %> details </h1>
+
+<h1>Basic Details</h1>
+<p><strong>Name: </strong> <%= @employee.name %> </p>
+<p><strong>Date of Birth: </strong> <%= @employee.dob %> </p>
+<p><strong>Phone_number: </strong> <%= @employee.phone_number %> </p>
+<p><strong>Email: </strong> <%= @employee.email %> </p>
+<p><strong>Gender: </strong> <%= @employee.gender %> </p>
+<p><strong>Martial Status: </strong> <%= @employee.martial_status %> </p>
+<p><strong>Blood Group: </strong> <%= @employee.blood_group %> </p>
+<p><strong>Father's Name: </strong> <%= @employee.fathers_name %> </p>
+<p><strong>Mother's Name: </strong> <%= @employee.mothers_name %> </p>
+<p><strong>Address: </strong> <%= @employee.address %> </p>
+
+<h1>Qualification</h1>
+<p><strong>Designation: </strong> <%= @employee.qualification.designation %> </p>
+<p><strong>Experience: </strong> <%= @employee.qualification.experience %> </p>
+<p><strong>PG CGPA: </strong> <%= @employee.qualification.pg_cgpa %> </p>
+<p><strong>PG year: </strong> <%= @employee.qualification.pg_year %> </p>
+<p><strong>UG CGPA: </strong> <%= @employee.qualification.ug_cgpa %> </p>
+<p><strong>UG year: </strong> <%= @employee.qualification.ug_year %> </p>
+<p><strong>Diploma CGPA: </strong> <%= @employee.qualification.diploma_cgpa %> </p>
+<p><strong>Diploma year: </strong> <%= @employee.qualification.diploma_year %> </p>
+<p><strong>12th CGPA: </strong> <%= @employee.qualification.twelve_th_percent %> </p>
+<p><strong>12th year: </strong> <%= @employee.qualification.twelve_th_year %> </p>
+<p><strong>10th CGPA: </strong> <%= @employee.qualification.ten_th_percent %> </p>
+<p><strong>10th year: </strong> <%= @employee.qualification.ten_th_year %> </p>
+
+<h1>Remaining Leaves</h1>
+<p><strong>Sick: </strong> <%= @employee.leave.sick %> </p>
+<p><strong>Privileged: </strong> <%= @employee.leave.privileged %> </p>
+<p><strong>Breavement: </strong> <%= @employee.leave.breavement %> </p>
+<p><strong>Study leave: </strong> <%= @employee.leave.study_leave %> </p>
+<p><strong>Time off: </strong> <%= @employee.leave.time_off %> </p>
+<p><strong>Maternity: </strong> <%= @employee.leave.maternity %> </p>
+<p><strong>Paternity: </strong> <%= @employee.leave.paternity %> </p>
+<p><strong>Optional: </strong> <%= @employee.leave.optional %> </p>
+<p><strong>Total leaves: </strong> <%= @total_leave %> </p>
+
+<h1>Salary details</h1>
+<p><strong>Basic pay: </strong> <%= @employee.salary.basic_pay %> </p>
+<p><strong>HRA: </strong> <%= @employee.salary.hra %> </p>
+<p><strong>Statutory bonus: </strong> <%= @employee.salary.statutory_bonus %> </p>
+<p><strong>Special allowance: </strong> <%= @employee.salary.special_allowance %> </p>
+<p><strong>Total salary: </strong> <%= @total_salary %> </p>
+

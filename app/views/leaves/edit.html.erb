@@ -1,0 +1,46 @@
+<h1>Leave Details</h1>
+
+<%#= form_with(scope: :qualifications,url: qualification_path(@qualifications), method: :put , local: true ) do |f| %>
+<%= form_with model: @leave do |f| %>
+
+  <div class="field">
+    <%= f.label :sick %><br />
+    <%= f.number_field :sick, autofocus: true, autocomplete: "sick" %>
+  </div>
+  <div class="field">
+    <%= f.label :privileged %><br />
+    <%= f.number_field :privileged, autofocus: true, autocomplete: "privileged" %>
+  </div>
+  <div class="field">
+    <%= f.label :breavement %><br />
+    <%= f.number_field :breavement, autofocus: true, autocomplete: "breavement" %>
+  </div>
+  <div class="field">
+    <%= f.label :study_leave %><br />
+    <%= f.number_field :study_leave, autofocus: true, autocomplete: "study_leave" %>
+  </div>
+  <div class="field">
+    <%= f.label :time_off %><br />
+    <%= f.number_field :time_off, autofocus: true, autocomplete: "time_off" %>
+  </div>
+  <div class="field">
+    <%= f.label :maternity %><br />
+    <%= f.number_field :maternity, autofocus: true, autocomplete: "maternity" %>
+  </div>
+  <div class="field">
+    <%= f.label :paternity %><br />
+    <%= f.number_field :paternity, autofocus: true, autocomplete: "paternity" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :optional %><br />
+    <%= f.number_field :optional, autofocus: true, autocomplete: "optional" %>
+  </div>
+
+  <%= f.number_field :employee_id, value: @leave.employee.id, type: :hidden %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

@@ -1,0 +1,74 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "employees/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob %><br />
+    <%= f.date_field :dob, autofocus: true, autocomplete: "dob" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", value: "12345678" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", value: "12345678" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.select :gender, ['None', 'Male', 'Female', 'Others']%>
+  </div>
+
+  <div class="field">
+    <%= f.label :martial_status %><br />
+    <%= f.select :martial_status, ['None','Single', 'Married']%>
+  </div>
+
+  <div class="field">
+    <%= f.label :blood_group %><br />
+    <%= f.text_field :blood_group, autofocus: true, autocomplete: "blood_group" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fathers_name %><br />
+    <%= f.text_field :fathers_name, autofocus: true, autocomplete: "fathers_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mothers_name %><br />
+    <%= f.telephone_field :mothers_name, autofocus: true, autocomplete: "mothers_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+  </div>
+  <%= @employee.inspect %>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "employees/shared/links" %>

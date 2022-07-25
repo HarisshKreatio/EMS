@@ -1,0 +1,61 @@
+<%= form_with(scope: :employee,url: home_path(@employee.id), method: :put , local: true ) do |f| %>
+<h1>Basic Details</h1>
+<div class="field">
+  <%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+</div>
+
+<div class="field">
+  <%= f.label :phone_number %><br />
+  <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+</div>
+
+<div class="field">
+  <%= f.label :dob %><br />
+  <%= f.date_field :dob, autofocus: true, autocomplete: "dob" , value: @employee.dob%>
+</div>
+
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+</div>
+
+<div class="field">
+  <%= f.label :gender %><br />
+  <%= f.select :gender, ['Male', 'Female', 'Others']%>
+</div>
+
+<div class="field">
+  <%= f.label :martial_status %><br />
+  <%= f.select :martial_status, ['Single', 'Married']%>
+</div>
+
+<div class="field">
+  <%= f.label :blood_group %><br />
+  <%= f.text_field :blood_group, autofocus: true, autocomplete: "blood_group" %>
+</div>
+
+<div class="field">
+  <%= f.label :fathers_name %><br />
+  <%= f.text_field :fathers_name, autofocus: true, autocomplete: "fathers_name" %>
+</div>
+
+<div class="field">
+  <%= f.label :mothers_name %><br />
+  <%= f.text_field :mothers_name, autofocus: true, autocomplete: "mothers_name" %>
+</div>
+
+<div class="field">
+  <%= f.label :address %><br />
+  <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+</div>
+
+<div class="actions">
+  <%= f.submit "Update" %>
+</div>
+
+  <%= link_to 'Qualification', edit_qualification_path(@employee.qualification.id) %>
+  <%#= @employee.qualifications.id %>
+  <%= link_to 'Leave', edit_leafe_path(@employee.leave.id) %>
+  <%= link_to 'Salary', edit_salary_path(@employee.salary.id) %>
+<% end %>
