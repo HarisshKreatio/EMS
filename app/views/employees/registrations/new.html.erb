@@ -1,3 +1,4 @@
+<% if admin_signed_in? %>
 <div class="container py-5 h-50 w-50">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div>
@@ -76,6 +77,9 @@
   </div>
 </div>
 
+<% else %>
+  <%= controller.redirect_to new_admin_session_path %>
+<% end %>
 
 
 

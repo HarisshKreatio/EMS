@@ -14,4 +14,12 @@ Rails.application.routes.draw do
   resources :leaves, only: [:edit, :update]
   resources :salaries, only: [:edit, :update]
 
+  get 'apply/apply_leave'
+  # put 'apply/:id', to: 'apply#update'
+  put 'apply/update'
+
+  get 'approve/dashboard'
+  put 'approve/update'
+  get 'status/leave_status'
+  put 'status/update'
 end

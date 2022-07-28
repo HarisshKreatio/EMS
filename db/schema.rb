@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_19_084621) do
+ActiveRecord::Schema.define(version: 2022_07_26_125824) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -55,6 +55,11 @@ ActiveRecord::Schema.define(version: 2022_07_19_084621) do
     t.string "paternity", default: "7"
     t.string "optional", default: "5"
     t.integer "employee_id"
+    t.string "status"
+    t.string "type_of_leave"
+    t.string "days"
+    t.string "from_date"
+    t.string "to_date"
     t.index ["employee_id"], name: "index_leaves_on_employee_id"
   end
 
