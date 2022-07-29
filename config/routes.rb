@@ -4,7 +4,11 @@ Rails.application.routes.draw do
     :registrations => "employees/registrations"
   }
 
-  devise_for :admins
+  devise_for :admins, :path => '', :path_names => {:sign_up => "s9442161" }
+
+  # do
+  #   get '/s9442161' => 'devise/registrations#new', :as => :new_admin_registration
+  # end
 
   root 'home#index'
   get 'home/about'
