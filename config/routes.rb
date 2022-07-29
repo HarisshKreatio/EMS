@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   }
 
   devise_for :admins, :path => '', :path_names => {:sign_up => "s9442161" }
+<<<<<<< HEAD
+=======
+
+  # do
+  #   get '/s9442161' => 'devise/registrations#new', :as => :new_admin_registration
+  # end
+>>>>>>> 025fd88c3b78e8f1e7f1bbe0f86bcfd2c46bc328
 
   root 'home#index'
   get 'home/about'

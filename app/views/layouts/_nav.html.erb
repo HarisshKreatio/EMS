@@ -22,11 +22,6 @@
             <%= link_to 'Logout', destroy_employee_session_path, method: :delete, class:"nav-link active " %>
           <% end  %>
         </li>
-<!--        <li class="nav-item ">-->
-          <%# if admin_signed_in? %>
-            <%#= link_to 'Edit profile', edit_admin_registration_path, class:"nav-link active"%>
-          <%# end %>
-<!--        </li>-->
 
         <% leave_count =  Leave.where(status: "Pending").count.to_s %>
 
@@ -35,6 +30,13 @@
             <%= link_to 'Leave Approval (' + leave_count +')', approve_dashboard_path, class:"nav-link active" %>
           <% end %>
         </li>
+
+<!--        <li class="nav-item ">-->
+          <%# if admin_signed_in? %>
+            <%#= link_to 'Edit profile', edit_admin_registration_path, class:"nav-link active"%>
+          <%# end %>
+<!--        </li>-->
+
         <li class="nav-item">
           <% if admin_signed_in? %>
             <%= link_to 'Logout', destroy_admin_session_path, method: :delete, class:"nav-link active" %>
